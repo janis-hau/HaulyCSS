@@ -1,0 +1,28 @@
+{
+  "name": "haulyshit2017",
+  "version": "1.0.0",
+  "description": "A wordpress base theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HaulyShit",
+    "WordPress"
+  ],
+  "author": "Janis Hau | HaulyShit.de",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "cssnano": "^3.10.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ftp-deploy": "^0.1.10",
+    "grunt-postcss": "^0.8.0",
+    "pixrem": "^3.0.2"
+  },
+  "dependencies": {}
+}
