@@ -1,0 +1,40 @@
+.label2border {
+    position : relative;
+    
+    label {
+        position   : absolute;
+        transition : inherit;
+        left       : $base-font-size;
+        z-index    : -1;
+    }
+    
+    
+    &.pd-0\|0\|0\|10 {
+        .label {
+            left : $base-font-size * 1.5;
+        }
+    }
+    
+    
+    textarea,
+    input {
+        &[value=""]:focus + label,
+        &:focus + label {
+            top       : 0;
+            font-size : .65em;
+            margin    : -.25em 0;
+        }
+        
+        
+        
+        &[value=""] {            
+            + label {
+                top       : 50%;
+                font-size : 1em;
+                margin    : -.85em 0;
+                padding   : 0;
+            }
+        } 
+    }
+    
+}

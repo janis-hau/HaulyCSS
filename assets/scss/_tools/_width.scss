@@ -1,0 +1,7 @@
+///******************************************************************************** 
+// * Widths 
+///*******************************************************************************/
+/* create Class */
+@include createClass( $map-width     , '.w'   , 'width'     );
+@include createClass( $map-max-width , '.maw' , 'max-width' );
+@include createClass( $map-min-width , '.miw' , 'min-width' );

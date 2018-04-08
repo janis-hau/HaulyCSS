@@ -1,0 +1,40 @@
+// ********************************************************************************
+// * BUTTONS
+// * 
+// * TABLE OF CONTENT
+// * 
+// * #general reset ...............................................................
+// * .btn .........................................................................
+// */
+
+
+
+// ********************************************************************************
+// * #general reset
+// */
+button, 
+input[type="submit"], 
+input[type="reset"] {
+    appearance  : none;
+    outline     : none;
+    border      : none;
+    cursor      : pointer;
+    font-size   : $base-font-size;
+    font-family : inherit;
+    text-align  : center;
+}
+
+
+
+// ********************************************************************************
+// * .btn
+// */
+.btn {
+    @extend .trs-\.25s;
+    text-align : center;
+    font-size  : $base-font-size * 1.5;
+    padding    : 10px 20px;
+    border     : 1px solid;
+}
+
+

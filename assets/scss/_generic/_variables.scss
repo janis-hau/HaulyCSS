@@ -1,0 +1,57 @@
+// ********************************************************************************
+// * WP-META
+// */
+$wp-meta : false;
+
+$wp-theme-name   : 'HaulyShit 2017';
+$wp-theme-uri    : 'HaulyShit.de';
+$wp-author       : 'Janis Hau';
+$wp-author-uri   : 'http://HaulyShit.de';
+$wp-desc         : "HaulyShit 2017";
+$wp-version      : '1.0';
+$wp-license      : '';
+$wp-license-uri  : '';
+$wp-tags         : 'Blog';
+$wp-ps           : "";
+
+
+
+// ********************************************************************************
+// * #Map-viewports
+// */
+$map-viewports: (
+    "m"  : "screen and (max-width: 640px)",
+    "t"  : "screen and (min-width: 641px) and (max-width: 980px)",
+    "d"  : "screen and (min-width: 981px) and (max-width: 1199px)",
+    "hd" : "screen and (min-width: 1200px)"
+);
+
+
+
+// ********************************************************************************
+// * #Grid-settings
+// */
+$grid-type : justify;
+
+
+
+// ********************************************************************************
+// * #Wrapper-settings
+// */
+$wrapper-max-width : 1880px;
+$wrapper-width-d   : percentage( 10 / 12 );
+$wrapper-width-m   : 100%;
+$wrapper-padding-d : 0 percentage( 1 / 12 );
+
+
+
+
+// ********************************************************************************
+// * #Base-Settings
+// */
+$base-font-size : 20px;
+
+
+
+@import 'settings-helper';
+@import 'settings-tools';

@@ -1,0 +1,71 @@
+///******************************************************************************** 
+// * VIEWPORTS 
+///*******************************************************************************/
+@mixin mediaQuery($mq) {
+	
+	$vp-exist: false;
+	
+	@each $vp in $map-viewports {
+		
+		// viewport name
+		$vp-n: nth($vp, 1);
+		
+		// viewport condition
+		$vp-c: nth($vp, 2);
+		
+		
+		@if $mq == $vp-n {
+			
+			$viewport-exist: true;
+			
+			@media #{$vp-c} {
+				@content;
+			}
+	
+		}
+		
+	}
+	
+}
+//1 
+//2 
+//3 
+//4 
+//5 
+///******************************************************************************** 
+// * For each media query
+///*******************************************************************************/ 
+@mixin eachMediaQuery() {
+    @content;
+    
+    @each $vp-n, $vp-c in $map-viewports {
+        @include mediaQuery($vp-n) {
+            &-#{$vp-n} {
+                @content;
+            }
+        } 
+    }
+}
+//1 
+//2 
+//3 
+//4 
+//5 
+///******************************************************************************** 
+// * For each media query
+///*******************************************************************************/
+@mixin extendEachMediaQuery($class) {
+    @extend #{$class};
+    
+    @each $vp-n, $vp-c in $map-viewports {
+        &-#{vp-n} {
+            @extend #{$class}-#{$vp-n};
+        }
+    }
+    
+}
+//1 
+//2 
+//3 
+//4 
+//5 

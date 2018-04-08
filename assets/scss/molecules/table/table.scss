@@ -1,0 +1,7 @@
+th {
+    padding : ($base-font-size * .5) ($base-font-size * .75);
+    border-bottom: 2px solid;
+}
+
+@import 'table--changing-horizon';
+@import 'table--changing-vertical';

@@ -1,0 +1,20 @@
+input {
+    &[type="text"],
+    &[type="search"],
+    &[type="email"],
+    &[type="tel"],
+    &[type="password"],
+    {
+        padding       : 20px;
+        appearance    : none;        
+        @extend .trs-\.25s;
+    }
+}
+
+
+textarea {
+    padding    : 20px;
+    appearance : none;
+    min-height : 250px;
+    resize     : vertical;
+}

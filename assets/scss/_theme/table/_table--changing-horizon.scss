@@ -1,0 +1,38 @@
+.table--changing-horizon {
+    thead {
+        &:first-child {
+            tr {
+                th {
+                    background-color : rgba($color-01, .05);
+                }
+            }
+        }
+    }
+
+
+
+    tbody {
+        tr {
+            &:nth-child(2n+1) {
+                td {
+                    background-color : rgba($color-01, .05);
+                }
+            }
+            &:nth-child(2n+2) {
+                td {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+    
+    
+    
+    tfoot {
+        tr {
+            th {
+                background-color : rgba($color-01, .05);
+            }
+        }
+    }
+}

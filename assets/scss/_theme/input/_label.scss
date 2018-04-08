@@ -1,0 +1,26 @@
+.label {
+    font-size : $base-font-size;
+}
+
+
+:required {
+    
+    + .label {
+        &::after {
+            content : '*';
+            color   : $color-03;
+            display : inline-block;
+            margin  : 0 0 0 .25em;
+        }
+    }
+    
+    
+    &.error {
+        + .label {
+            &::after {
+                color : $color-04;
+            }
+        }
+    }
+  
+}

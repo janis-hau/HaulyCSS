@@ -1,0 +1,7 @@
+///******************************************************************************** 
+// * height 
+///*******************************************************************************/
+/* create Class */
+@include createClass( $map-height     , '.h'   , 'height'     );
+@include createClass( $map-max-height , '.mah' , 'max-height' );
+@include createClass( $map-min-height , '.mih' , 'min-height' );

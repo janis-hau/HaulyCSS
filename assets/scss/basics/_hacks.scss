@@ -1,0 +1,52 @@
+// ********************************************************************************
+// * TABLE OF CONTENT
+// * 
+// * box-sizing:inherited ..................... make it easier to integrate plugins
+// * .embed-container ..................................... make iframes responsive
+// */
+
+
+
+// ********************************************************************************
+// * box-sizing:inherited
+// */
+html {
+    -webkit-box-sizing : border-box;
+       -moz-box-sizing : border-box;
+            box-sizing : border-box;
+}
+
+
+*, *::after, *::before {
+    outline    : none;
+    box-sizing : inherit;
+    word-break : break-word;
+}
+
+
+
+// ********************************************************************************
+// * #embed-container
+// */
+.embed-container {
+    position       : relative; 
+    padding-bottom : 56.25%; /* ratio 16x9 */
+    height         : 0; 
+    overflow       : hidden; 
+    width          : 100%;
+    height         : auto;
+    
+    
+    &.ratio4x3 {
+      padding-bottom: 75%;
+    }
+    
+    
+    iframe {
+      position : absolute; 
+      top      : 0; 
+      left     : 0; 
+      width    : 100%; 
+      height   : 100%; 
+    }
+}

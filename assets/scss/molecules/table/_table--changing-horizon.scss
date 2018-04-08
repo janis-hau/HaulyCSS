@@ -1,0 +1,13 @@
+.table--changing-horizon {
+    th,
+    td {
+        padding: ( $base-font-size * .5 ) ( $base-font-size * .75 );
+    }
+    
+    
+    th {
+        h2, h4 {
+          margin: 0;
+        }
+    }
+}

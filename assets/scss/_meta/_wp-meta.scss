@@ -1,0 +1,15 @@
+@if $wp-meta != false {
+/*!
+Theme Name: #{$wp-theme-name}
+Theme URI: #{$wp-theme-uri}
+Author: #{$wp-author}
+Author URI: #{$wp-author-uri}
+Description: #{$wp-desc}
+Version: #{$wp-version}
+License: #{$wp-license}
+License URI: #{$wp-license-uri}
+Tags: #{$wp-tags}
+
+#{$wp-ps}
+!*/  
+}

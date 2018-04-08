@@ -1,0 +1,14 @@
+.label {
+    font-size : $base-font-size;
+}
+
+
+:required {
+    + .label {
+        &::after {
+            content : '*';
+            display : inline-block;
+            margin  : 0 0 0 .25em;
+        }
+    }  
+}

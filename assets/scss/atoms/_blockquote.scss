@@ -1,0 +1,44 @@
+cite,
+blockquote {
+    position   : relative;
+    width      : 100%;
+    padding    : 20px 3.75em;
+    margin     : $base-font-size * 1.5 0;
+    font-size  : 1.25em;
+    display    : block;
+    width      : 100%;
+    
+    
+    &::before,
+    &::after {
+        position    : absolute;
+        top         : 50%;
+        margin-top  : -.35em;
+        line-height : .5em;
+        font-weight : bold;
+        display     : inline-block;
+        font-size   : 3.5em;
+    }
+    
+    
+    &::before {
+        content : '\00bb';
+        left    : $base-font-size * 1.25;
+    }
+    
+    
+    &::after {
+        content : '\00ab';
+        right   : $base-font-size * 1.25;
+    }
+    
+    
+    p {
+        margin : 0;
+        
+        
+        &:last-child {
+            padding-bottom : 0 !important;
+        }
+    }
+}

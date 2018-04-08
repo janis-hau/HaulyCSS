@@ -1,0 +1,146 @@
+///******************************************************************************** 
+// * COLUMN-SNIPPET
+// * 
+// * Did you know the 4-item-column template, they every Designer draws?
+// * First-child has left none space, the last-child right none space... what kind 
+// * of shit, every fucking time. But hey look beneath this! :D
+///*******************************************************************************/
+
+// DRY
+// This mixin is the main content of the function to produce the grids
+// Until yet 
+@mixin x-element-item($space, $cols) {
+    width: percentage(  1 / $cols );
+                
+    @if $cols == 1 {
+        padding : ($space / 2) 0;
+    } 
+    
+    @elseif $cols == 2 {
+        padding : ($space / 2);
+                    
+        &:nth-child(#{$cols}n+1) {
+            padding-left : 0;
+        }
+                    
+        &:nth-child(#{$cols}n+#{$cols}) {
+            padding-right : 0;
+        }
+    }
+    
+    @elseif $cols == 3 {
+        padding : ($space / 2) ($space / $cols);
+                    
+        &:nth-child(#{$cols}n+1) {
+            padding-left  : 0;
+            padding-right : ($space / $cols) * ($cols - 1) ;
+        }
+                    
+        &:nth-child(#{$cols}n+#{$cols}) {
+            padding-right : 0;
+            padding-left  : ($space / $cols) * ($cols - 1) ;
+        }
+    }
+    
+    @elseif $cols == 4 {
+        padding : ($space / 2) ($space / $cols);
+                    
+        &:nth-child(#{$cols}n+1) {
+            padding-left  : 0;
+            padding-right : ($space / $cols) * ($cols - 1);
+        }
+                    
+        &:nth-child(#{$cols}n+2) {
+            padding-left  : $space / $cols;
+            padding-right : ($space / $cols) * ($cols * .5);
+        }
+                    
+        &:nth-child(#{$cols}n+#{$cols - 1}) {
+            padding-right : $space / $cols;
+            padding-left  : ($space / $cols) * ($cols * .5);
+        }
+                    
+        &:nth-child(#{$cols}n+#{$cols}) {
+            padding-right : 0;
+            padding-left  : ($space / $cols) * ($cols - 1);
+        }
+    }
+    
+    
+    @elseif $cols == 5 {
+        padding : ($space / 2) ($space / $cols) * ( ( $cols - 1 ) * .5 );
+                    
+        &:nth-child(#{$cols}n+1) {
+            padding-left  : 0;
+            padding-right : ($space / $cols) * ($cols - 1);
+        }
+
+        &:nth-child(#{$cols}n+2) {
+            padding-left  : ($space / $cols);
+            padding-right : ($space / $cols) * ($cols - 2);
+        }
+
+        &:nth-child(#{$cols}n+#{$cols - 1}) {
+            padding-left  : ($space / $cols) * ($cols - 2);
+            padding-right : ($space / $cols);
+        }
+
+        &:nth-child(#{$cols}n+#{$cols}) {
+            padding-right : 0;
+            padding-left  : ($space / $cols) * ($cols - 1);
+        }
+    }
+}
+
+
+
+@each $name, $value in $map-x-element {
+    #{$name} {
+        text-align       : left;
+        -ms-text-justify : initial;
+        text-justify     : initial;
+        
+        $map-keys : map-keys($map-viewports);
+        
+        // If last of var map not false, create a generaly class
+        @if nth($value, length($map-viewports) + 1) != 0 {
+          
+            $cols  : nth( $value, length( $map-viewports ) + 1 );
+            $space : nth( $value, 1 );
+            &__item {
+                @include x-element-item($space, $cols);
+            }
+        }
+        
+        
+        
+        @for $i from 1 to length($map-viewports) + 1 {
+              
+            // Get the key from viewports
+            $map-keys : map-keys($map-viewports);
+            
+            $cols  : nth( $value, $i + 1 );
+            $space : nth( $value, 1 );
+                
+            @if nth($value, ($i + 1 )) != 0 {
+                  
+                &-#{nth( $map-keys, $i)} {
+                    text-align       : left;
+                    -ms-text-justify : initial;
+                    text-justify     : initial;
+                    
+                    
+                    @include mediaQuery( #{nth( $map-keys, $i)} ) {
+                        .related__item {
+                            @include x-element-item($space, $cols);
+                        }
+                    }
+                }
+                    
+            }
+        }
+        
+        
+    }
+}
+// /@each

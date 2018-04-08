@@ -1,0 +1,11 @@
+blockquote,
+cite
+{
+    background : rgba($color-00, .25);
+    
+    
+    &::before,
+    &::after {
+        color  : $color-03;
+    }    
+}

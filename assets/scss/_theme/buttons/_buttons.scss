@@ -1,0 +1,60 @@
+// ********************************************************************************
+// * BUTTONS
+// * 
+// * TABLE OF CONTENT
+// * 
+// * #general reset ...............................................................
+// * #burger-button ...............................................................
+// */
+
+
+
+// ********************************************************************************
+// * general reset
+// */
+button, 
+input[type="submit"], 
+input[type="reset"] {
+    background : transparent;
+}
+
+
+
+// ********************************************************************************
+// * .btn
+// */
+.btn {
+    &.btn--secondary {
+        border-color : $color-03;
+        color        : $color-03;
+
+        &:not([disabled]):hover {
+            border-color : $color-00;
+            background   : $color-03;
+            color        : $color-00;
+        }
+        
+        &[disabled] {
+            border-color : $color-03;
+            color        : $color-03;
+        }
+    }
+        
+        
+    &.btn--primary {
+        background   : $color-03;
+        color        : $color-00;
+        border-color : $color-03;
+            
+        &:not([disabled]):hover {
+            background : transparent;
+            color      : $color-03;
+        }
+    }
+    
+    
+    &[disabled] {
+        opacity : .5;
+        filter  : grayscale(100%);
+    }
+}

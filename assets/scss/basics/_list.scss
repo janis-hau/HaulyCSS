@@ -1,0 +1,33 @@
+// ********************************************************************************
+// * TABLE OF CONTENT
+// * 
+// * ul, ol ................................................ make images responsive
+// * .list--inline ............................. inline lists like horizontal nav's
+// */
+
+
+
+// ********************************************************************************
+// * ul, ol
+// */
+ul, ol {
+    padding : 0 0 0 $base-font-size;
+    margin  : 0 0 $base-font-size * 2;
+}
+
+
+
+// ********************************************************************************
+// * .list--inline
+// */
+.list--inline {
+    @extend .grid-container;
+    padding : 0;
+        
+        
+    > li {
+        @extend .grid-item;
+        list-style-type : none;
+        padding-right   : $base-font-size * .5;
+    }
+}

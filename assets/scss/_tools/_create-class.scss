@@ -1,0 +1,25 @@
+@mixin createClass( $map, $prefix, $property ) {
+    @each $name, $value in $map {
+        #{$prefix}-#{$name} {
+
+            // If last of var map not false, create a generaly class
+            @if nth($value, length($map-viewports) + 2) != 0 { #{$property} : nth($value, 1); }
+            
+            @for $i from 1 to length($map-viewports) + 1 {
+              
+                // Get the key from viewports
+                $map-keys : map-keys($map-viewports);
+                
+                @if nth($value, ($i + 1 )) != 0 {
+                  
+                    &-#{nth( $map-keys, $i)} {                        
+                        @include mediaQuery( #{nth( $map-keys, $i)} ) {
+                            #{$property} : nth( $value, 1 )
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

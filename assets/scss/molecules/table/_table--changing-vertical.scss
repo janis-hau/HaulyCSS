@@ -1,0 +1,19 @@
+.table--changing-vertical {
+    thead, 
+    tbody {
+        tr {
+            th,
+            td {
+                &:nth-child(2n+2) {
+                    border-right : 1px solid;
+                    border-left  : 1px solid;
+                }
+                
+                
+                &:last-child {
+                    border-right : none;
+                }
+            }
+        }
+    }
+}

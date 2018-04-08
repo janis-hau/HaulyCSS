@@ -1,0 +1,6 @@
+// ********************************************************************************
+// * #margin
+// */
+@include createClass( $map-margin        , '.mg'  , 'margin' );
+@include createClass( $map-margin-bottom , '.mgb' , 'margin-bottom' );
+@include createClass( $map-margin-top    , '.mgt' , 'margin-top' );

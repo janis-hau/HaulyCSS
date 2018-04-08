@@ -1,0 +1,6 @@
+// ********************************************************************************
+// * #Padding
+// */
+@include createClass( $map-padding       , '.pd'  , 'padding' );
+@include createClass( $map-padding-right , '.pdr' , 'padding-right' );
+@include createClass( $map-padding-left  , '.pdl' , 'padding-left' );

@@ -1,0 +1,17 @@
+.wrapper {
+    display    : inline-block;
+    text-align : left;
+    max-width  : $wrapper-max-width;
+    
+    @include mediaQuery('m') { 
+        width : $wrapper-width-m;
+    }
+    
+    @include mediaQuery('d') { 
+        width : $wrapper-width-d;
+    }
+    
+    @include mediaQuery('hd') { 
+        width : $wrapper-width-d;
+    }
+}
