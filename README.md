@@ -1,7 +1,7 @@
 # HaulyCSS
 is a SCSS-Framework they've set the goal to produce just the things you need and not more.
 
-## How is working?
+## How does it working?
 HaulyCSS allows you to create all classes for each viewport with variable-maps. It's easy to expand.
 
 ### Viewports
