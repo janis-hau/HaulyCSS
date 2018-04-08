@@ -1,6 +1,19 @@
 # HaulyCSS
 is a SCSS-Framework they've set the goal to produce just the things you need and not more.
 
+### Features
+* Blockquote
+* Fast
+* Lightweight
+* Easy extendable
+* SCSS
+* Buttons (btn--primary btn--secondary)
+* Forms
+* X-Element
+* Justify-Grid with hack
+* embed-container (responsive iframes)
+* label2border
+
 ## How does it working?
 HaulyCSS allows you to create all classes for each viewport with variable-maps. It's easy to expand.
 
@@ -48,15 +61,5 @@ All created classes have prefixes like emmet.io for e.g.:
 | w-6\/12-hd   | @media screen and (min-width: 1200px) { width: 50%; } |
 | mgt-20       | margin-top: 20px;                                     |
 
-### Features
-	
-* Blockquote
-* Fast
-* Lightweight
-* Easy extendable
-* SCSS
-* Buttons (btn--primary btn--secondary)
-* Forms
-* X-Element
 
 © Copyright by HaulyShit
