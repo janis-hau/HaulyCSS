@@ -22,7 +22,7 @@ module.exports = function( grunt ) {
 		sass : {
 			dist : {
 				options : {// Target options
-					style : 'nested',
+					style : 'compressed',
 					precision : 5,
 					update : false
 				},
@@ -118,5 +118,6 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'default', [ 'watch' ] );
 	grunt.registerTask( 'css'    , [ 'sass', 'postcss' ] );
+	grunt.registerTask( 'all'    , [ 'sass', 'postcss', 'uglify', 'watch' ] );
 };
 

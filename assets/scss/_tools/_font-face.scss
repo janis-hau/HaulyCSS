@@ -1,0 +1,19 @@
+// ********************************************************************************
+// * Font face
+// */
+@each $font in $map-font {
+    @font-face {
+        font-family : map-get( map-get($map-font, nth($font, 1) ), 'family');
+        font-style  : map-get( map-get($map-font, nth($font, 1) ), 'style' );
+        font-weight : map-get( map-get($map-font, nth($font, 1) ), 'weight');
+
+        // src : url("#{map-get( map-get($map-font, nth($font, 1) ), 'url')}#{map-get( map-get($map-font, nth($font, 1) ), 'file')}.eot"); /* IE9 Compat Modes */
+        src : local( nth($font, 1) ),          // Erst nachsehen, ob die Schrift 
+              local( "#{map-get( map-get($map-font, nth($font, 1) ), 'file')}" ),  // beim Besucher schon installiert ist
+              url("#{map-get( map-get($map-font, nth($font, 1) ), 'url')}#{map-get( map-get($map-font, nth($font, 1) ), 'file')}.eot?#iefix")                                              format("embedded-opentype"), /* IE6-IE8 */
+              url("#{map-get( map-get($map-font, nth($font, 1) ), 'url')}#{map-get( map-get($map-font, nth($font, 1) ), 'file')}.woff")                                                    format("woff"), /* Modern Browsers */
+              url("#{map-get( map-get($map-font, nth($font, 1) ), 'url')}#{map-get( map-get($map-font, nth($font, 1) ), 'file')}.ttf")                                                     format("truetype"), /* Safari, Android, iOS */
+              url("#{map-get( map-get($map-font, nth($font, 1) ), 'url')}#{map-get( map-get($map-font, nth($font, 1) ), 'file')}.otf")                                                     format("opentype"), /* Safari, Android, iOS */
+              url("#{map-get( map-get($map-font, nth($font, 1) ), 'url')}#{map-get( map-get($map-font, nth($font, 1) ), 'file')}.#{map-get( map-get($map-font, nth($font, 1) ), 'file')}") format("svg"); /* Legacy iOS */
+    }
+}
