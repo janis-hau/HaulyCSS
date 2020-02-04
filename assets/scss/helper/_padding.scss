@@ -2,7 +2,7 @@
 // * #Padding
 // */
 @include createClass( $map-padding        , '.pd'  , 'padding'        );
-@include createClass( $map-padding-bottom , '.pdr' , 'padding-bottom' );
+@include createClass( $map-padding-bottom , '.pdb' , 'padding-bottom' );
 @include createClass( $map-padding-right  , '.pdr' , 'padding-right'  );
 @include createClass( $map-padding-left   , '.pdl' , 'padding-left'   );
-@include createClass( $map-padding-top    , '.pdl' , 'padding-top'    );
+@include createClass( $map-padding-top    , '.pdt' , 'padding-top'    );

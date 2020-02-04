@@ -16,7 +16,7 @@
         padding : ($space / 2) 0;
     } 
     
-    @elseif $cols == 2 {
+    @else if $cols == 2 {
         padding : ($space / 2);
                     
         &:nth-child(#{$cols}n+1) {
@@ -28,7 +28,7 @@
         }
     }
     
-    @elseif $cols == 3 {
+    @else if $cols == 3 {
         padding : ($space / 2) ($space / $cols);
                     
         &:nth-child(#{$cols}n+1) {
@@ -42,7 +42,7 @@
         }
     }
     
-    @elseif $cols == 4 {
+    @else if $cols == 4 {
         padding : ($space / 2) ($space / $cols);
                     
         &:nth-child(#{$cols}n+1) {
@@ -67,7 +67,7 @@
     }
     
     
-    @elseif $cols == 5 {
+    @else if $cols == 5 {
         padding : ($space / 2) ($space / $cols) * ( ( $cols - 1 ) * .5 );
                     
         &:nth-child(#{$cols}n+1) {
