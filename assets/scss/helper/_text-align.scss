@@ -1,4 +1,5 @@
 // ********************************************************************************
 // * #Text-Align
 // */
-@include createClass( $map-text-align , '.ta' , 'text-align' );
+@include createClass( $map-text-align      , '.ta'  , 'text-align'      );
+@include createClass( $map-text-align-last , '.tal' , 'text-align-last' );

@@ -2,20 +2,34 @@
 // * Variables
 // */
 @import '_generic/variables';
+@import '_generic/settings-colors';
+
+
+
+// ********************************************************************************
+// * Tools
+// */
+@import '_tools/viewports';
+@import '_tools/font-face';
 
 
 
 // ********************************************************************************
 // * Basics
 // */
-@import '_theme/colors';
-@import '_tools/font-face';
-@import '_theme/background/background';
-@import '_theme/blockquote/blockquote';
-@import '_theme/buttons/buttons';
-@import '_theme/hr/hr';
-@import '_theme/input/input';
-@import '_theme/scrollbar/scrollbar';
-@import '_theme/selection/selection';
-@import '_theme/table/table';
-@import '_theme/typo/typo';
+@import '_theme/_basics/background';
+@import '_theme/_basics/scrollbar';
+@import '_theme/_basics/selection';
+@import '_theme/_basics/typo';
+
+
+
+// ********************************************************************************
+// * Atoms
+// */
+@import '_theme/atoms/blockquote/blockquote';
+@import '_theme/atoms/buttons/buttons';
+@import '_theme/atoms/hr/hr';
+@import '_theme/atoms/input/input';
+@import '_theme/atoms/input/label';
+@import '_theme/atoms/table/table.scss';

@@ -131,7 +131,7 @@
                     
                     
                     @include mediaQuery( #{nth( $map-keys, $i)} ) {
-                        .related__item {
+                        #{$name}__item {
                             @include x-element-item($space, $cols);
                         }
                     }
